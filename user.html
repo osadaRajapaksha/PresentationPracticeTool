@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Page - Smart Track</title>
+    <link rel="stylesheet" href="styles/styleNav.css" />
+    <link rel="stylesheet" href="styles/styleUser.css" />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="sipta_logo.png" alt="Smart Track Logo" class="logo" /></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html">logout</a>
+
+        <!-- Removed Sign In button -->
+      </nav>
+    </header>
+
+    <div class="content">
+      <h1>User Page</h1>
+      
+      <!-- Frame Container -->
+      <div class="frame-container">
+        <div class="time-input">
+          <div class="time-wrapper">
+            <div>
+              <label for="minutes">Minutes:</label>
+              <input type="number" id="minutes" placeholder="0" min="0" />
+            </div>
+            <div>
+              <label for="seconds">Seconds:</label>
+              <input type="number" id="seconds" placeholder="0" min="0" max="59" />
+            </div>
+          </div>
+        </div>
+        <div class="countdown" id="countdown">00:00</div>
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progress-bar-container">
+          <div class="progress" id="progress"></div>
+        </div>
+        
+        <!-- Status Bar Below the Progress Bar -->
+        <div class="status-bar" id="status-bar-container">
+          <div class="status-message" id="status-message">Ready</div>
+        </div>
+
+        <div class="controls">
+          <button id="start">▶</button>
+          <button id="stop">⏹</button>
+          <button id="reset">🔄</button>
+        </div>
+
+        <div id="analyze-button-container" style="display: none;">
+          <button id="analyze" onclick="redirectToAnalyzePage()">Analyze Text</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="actions/user.js"></script>
+  </body>
+</html>
